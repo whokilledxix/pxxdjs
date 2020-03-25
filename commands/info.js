@@ -19,7 +19,7 @@ module.exports.run = async(bot, message, args) => {
 
 
 
- if(args[0] == "info-ban"||"i-ban"||"ib") {
+ if(args[0] == "ib") {
     let imEmbed = new Discord.MessageEmbed()
     .setColor(colours.jasnoniebieski)
     .setTitle("**Info - Ban**")
@@ -31,7 +31,7 @@ module.exports.run = async(bot, message, args) => {
 
     message.delete();
  }
- if(args[0] == "info-cat"||"ic"||"i-cat") {
+ if(args[0] == "ic") {
     let imEmbed = new Discord.MessageEmbed()
     .setColor(colours.jasnoniebieski)
     .setTitle("**Info - cat**")
@@ -44,7 +44,7 @@ module.exports.run = async(bot, message, args) => {
     message.delete();
  }
 
- if(args[0] == "info-dog"||"i-dog"||"id") {
+ if(args[0] == "id"||"i-dog") {
     let imEmbed = new Discord.MessageEmbed()
     .setColor(colours.jasnoniebieski)
     .setTitle("**Info - dog**")
@@ -57,7 +57,7 @@ module.exports.run = async(bot, message, args) => {
     message.delete();
  }
 
- if(args[0] == "info-kick"||"i-kick"||"ik") {
+ if(args[0] == "ik"||"i-kick") {
     let imEmbed = new Discord.MessageEmbed()
     .setColor(colours.jasnoniebieski)
     .setTitle("**Info - Kick**")
@@ -70,7 +70,7 @@ module.exports.run = async(bot, message, args) => {
     message.delete();
  }
 
- if(args[0] == "info-mute"||"i-mute"||"im") {
+ if(args[0] == "im"|| "i-mute") {
     let imEmbed = new Discord.MessageEmbed()
     .setColor(colours.jasnoniebieski)
     .setTitle("**Info - Mute**")
@@ -83,7 +83,7 @@ module.exports.run = async(bot, message, args) => {
     message.delete();
  }
 
- if(args[0] == "info-ping"||"i-ping") {
+ if(args[0] == "i-ping") {
     let ipEmbed = new Discord.MessageEmbed()
     .setColor(colours.aqua)
     .setTitle("**Info - Ping**")
@@ -96,7 +96,7 @@ module.exports.run = async(bot, message, args) => {
     message.delete()
  }
 
- if(args[0] == "info-pomoc"||"i-pomoc"||"ip") {
+ if(args[0] == "i-pomoc") {
     let imEmbed = new Discord.MessageEmbed()
     .setColor(colours.jasnoniebieski)
     .setTitle("**Info - Pomoc**")
@@ -109,7 +109,7 @@ module.exports.run = async(bot, message, args) => {
  }
 
 
- if(args[0] == "info-report"||"i-r"||"ir") {
+ if(args[0] == "report") {
     let irEmbed = new Discord.MessageEmbed()
     .setColor(colours.zielony)
     .setTitle("**Info - Report**")
@@ -122,7 +122,7 @@ module.exports.run = async(bot, message, args) => {
     message.delete()
  }
 
- if(args[0] == "info-serverinfo"||"i-serverinfo"||"is"||"i-si") {
+ if(args[0] == "serverinfo") {
     let imEmbed = new Discord.MessageEmbed()
     .setColor(colours.jasnoniebieski)
     .setTitle("**Info - ServerInfo**")
@@ -135,7 +135,7 @@ module.exports.run = async(bot, message, args) => {
     message.delete();
  }
 
- if(args[0] == "info-unmute"||"i-unmute"||"iu"){
+ if(args[0] == "unmute"){
     let imEmbed = new Discord.MessageEmbed()
     .setColor(colours.jasnoniebieski)
     .setTitle("**Info - Unmute**")
@@ -148,7 +148,7 @@ module.exports.run = async(bot, message, args) => {
     message.delete();
  }
 
- if(args[0] == "info-uptime"||"i-u") {
+ if(args[0] == "i-uptime"||"") {
     let iuEmbed = new Discord.MessageEmbed()
     .setColor(colours.jasnoniebieski)
     .setTitle("**Info - Uptime**")
@@ -160,7 +160,7 @@ module.exports.run = async(bot, message, args) => {
     message.delete();
  }
 
- if(args[0] == "info-userinfo"||"i-userinfo"||"i-ui"){
+ if(args[0] == "i-userinfo"||"i-ui"){
     let imEmbed = new Discord.MessageEmbed()
     .setColor(colours.jasnoniebieski)
     .setTitle("**Info - UserInfo**")
@@ -185,6 +185,6 @@ module.exports.run = async(bot, message, args) => {
 module.exports.config = {
     name: "info",
     usage: "k!info <nazwa komendy>",
-    aliases: ["i"],
     accessableby: "Members",
+    aliases: []
 }
