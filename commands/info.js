@@ -4,6 +4,8 @@ const colours = require("../colours.json");
 const superagent = require("superagent") 
 
 
+
+
 module.exports.run = async(bot, message, args) => {
     let iEmbed = new Discord.MessageEmbed()
     .setColor(colours.aqua)
@@ -19,7 +21,7 @@ module.exports.run = async(bot, message, args) => {
 
 
 
- if(args[0] == "ib") {
+ if(args[0] == "ban") {
     let imEmbed = new Discord.MessageEmbed()
     .setColor(colours.jasnoniebieski)
     .setTitle("**Info - Ban**")
@@ -31,7 +33,7 @@ module.exports.run = async(bot, message, args) => {
 
     message.delete();
  }
- if(args[0] == "ic") {
+ if(args[0] == "cat") {
     let imEmbed = new Discord.MessageEmbed()
     .setColor(colours.jasnoniebieski)
     .setTitle("**Info - cat**")
@@ -44,7 +46,7 @@ module.exports.run = async(bot, message, args) => {
     message.delete();
  }
 
- if(args[0] == "id"||"i-dog") {
+ if(args[0] == "dog") {
     let imEmbed = new Discord.MessageEmbed()
     .setColor(colours.jasnoniebieski)
     .setTitle("**Info - dog**")
@@ -57,7 +59,7 @@ module.exports.run = async(bot, message, args) => {
     message.delete();
  }
 
- if(args[0] == "ik"||"i-kick") {
+ if(args[0] == "kick") {
     let imEmbed = new Discord.MessageEmbed()
     .setColor(colours.jasnoniebieski)
     .setTitle("**Info - Kick**")
@@ -70,7 +72,7 @@ module.exports.run = async(bot, message, args) => {
     message.delete();
  }
 
- if(args[0] == "im"|| "i-mute") {
+ if(args[0] == "mute") {
     let imEmbed = new Discord.MessageEmbed()
     .setColor(colours.jasnoniebieski)
     .setTitle("**Info - Mute**")
@@ -83,7 +85,7 @@ module.exports.run = async(bot, message, args) => {
     message.delete();
  }
 
- if(args[0] == "i-ping") {
+ if(args[0] == "ping") {
     let ipEmbed = new Discord.MessageEmbed()
     .setColor(colours.aqua)
     .setTitle("**Info - Ping**")
@@ -96,7 +98,7 @@ module.exports.run = async(bot, message, args) => {
     message.delete()
  }
 
- if(args[0] == "i-pomoc") {
+ if(args[0] == "pomoc") {
     let imEmbed = new Discord.MessageEmbed()
     .setColor(colours.jasnoniebieski)
     .setTitle("**Info - Pomoc**")
@@ -148,7 +150,7 @@ module.exports.run = async(bot, message, args) => {
     message.delete();
  }
 
- if(args[0] == "i-uptime"||"") {
+ if(args[0] == "uptime") {
     let iuEmbed = new Discord.MessageEmbed()
     .setColor(colours.jasnoniebieski)
     .setTitle("**Info - Uptime**")
@@ -160,7 +162,7 @@ module.exports.run = async(bot, message, args) => {
     message.delete();
  }
 
- if(args[0] == "i-userinfo"||"i-ui"){
+ if(args[0] == "userinfo"){
     let imEmbed = new Discord.MessageEmbed()
     .setColor(colours.jasnoniebieski)
     .setTitle("**Info - UserInfo**")
@@ -179,12 +181,13 @@ module.exports.run = async(bot, message, args) => {
 
 }
 
-
-
-
 module.exports.config = {
     name: "info",
     usage: "k!info <nazwa komendy>",
     accessableby: "Members",
-    aliases: []
+    aliases: ["informacje", "i"],
+
 }
+
+
+

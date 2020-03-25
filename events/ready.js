@@ -23,4 +23,10 @@ module.exports = bot => {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
         bot.user.setActivity("Mój prefix to - k!", {type: "PLAYING"});
     }, 5000)
+  
+  
+  setInterval(function() {
+        let status = statuses[Math.floor(Math.random() * statuses.length)];
+        bot.user.setActivity("Jestem juz na Glitchu :O", {type: "PLAYING"});
+    }, 5000)
 }
