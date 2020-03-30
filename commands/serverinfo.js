@@ -17,7 +17,9 @@ module.exports.run = async (bot, message, args) =>{
         .setFooter(`KxpBOTv2 (beta)`, bot.user.displayAvatarURL);
         message.channel.send({embed: sEmbed});
        
-        message.delete();
+        if (sEmbed) {
+          message.react('✅')
+        }
     
 }
 

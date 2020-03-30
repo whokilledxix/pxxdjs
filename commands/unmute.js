@@ -8,6 +8,10 @@ const client = require("discord.js")
 
 module.exports.run = async (bot, message, args) => {
     let unmute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+    if (unmute) {
+      message.react('✅')
+    }
+  
     if(!unmute) return message.reply("Nie znaleziono użytkownika!");
     if(unmute.hasPermission('MANAGE_ROLES')) return message.reply("Nie mam permisji do zabrania roli!");
 
