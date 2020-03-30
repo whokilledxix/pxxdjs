@@ -11,13 +11,13 @@ module.exports.run = async (bot, message, args) => {
   
   
   let pomoc = new Discord.MessageEmbed()
-  .setColor(colours.fioletowy)
+    .setColor(colours.fioletowy)
     .setTitle(``, true)
     .setThumbnail(message.guild.iconURL)
     .addField(`**Wysłano pomylśnie!**`, "``Moja lista komend została wysłana do ciebie na pw!``", true)
     .setFooter(`KxpBOTv2 (beta)`)
     message.channel.send({embed: pomoc});
-    if (pomoc) {
+if (pomoc) {
     message.react('✅')
   } 
   if (!pomoc) {
