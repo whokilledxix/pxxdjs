@@ -7,15 +7,23 @@ const prefix = (botconfig)
 
 module.exports.run = async (bot, message, args) => {
     
-    let sEmbed = new Discord.MessageEmbed()
-    .setColor(colours.fioletowy)
+  
+  
+  
+  let pomoc = new Discord.MessageEmbed()
+  .setColor(colours.fioletowy)
     .setTitle(``, true)
     .setThumbnail(message.guild.iconURL)
     .addField(`**Wysłano pomylśnie!**`, "``Moja lista komend została wysłana do ciebie na pw!``", true)
     .setFooter(`KxpBOTv2 (beta)`)
-    message.channel.send({embed: sEmbed});
-
-    message.delete();
+    message.channel.send({embed: pomoc});
+    if (pomoc) {
+    message.react('✅')
+  } 
+  if (!pomoc) {
+    message.react('❌')
+  }
+    
     
     
     let pEmbed = new Discord.MessageEmbed()

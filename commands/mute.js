@@ -7,6 +7,14 @@ const client = require("discord.js")
 
 module.exports.run = async (bot, message, args) => {
     let mute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]))
+    if (mute) {
+      message.react('✅')
+    }
+    
+    if (!mute) {
+      message.react('❌')
+    }
+    
     if(!mute) return message.reply("Nie znaleziono użytkownika!")
     if(mute.hasPermission('ADMINISTRATOR')) return message.reply("Nie mam permisji do wyciszenia")
     let muterole = message.guild.roles.fetch(`name`, "Muted");
@@ -29,7 +37,7 @@ module.exports.run = async (bot, message, args) => {
     }await message.mentions.members.first().roles.add('688417859319234665');
     message.reply(`<@${mute.id}> został wyciszony!`)
 
-    message.delete();
+    
 }
 
     

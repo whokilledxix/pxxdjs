@@ -5,8 +5,14 @@ const superagent = require("superagent");
 const client = require("discord.js")
 
 module.exports.run = async (bot, message, args) => {
-    
-    let kick = message.mentions.members.first();
+  let kick = message.mentions.members.first();
+  if (kick) {
+      message.react('😀')
+    }
+    if (!kick) {
+      message.react('❌')
+    }  
+  
     if (!kick) return message.reply("``Nie znaleziono użytkownika!``, **Poprawne użycie:** ``k!kick <@user> <powod>``");
     if (!kick.kickable) return message.reply("``Nie mogę wurzycić tego użytkownika!``");
    

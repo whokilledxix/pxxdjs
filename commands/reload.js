@@ -9,6 +9,13 @@ module.exports.run = async (bot, message, args) => {
 
     let commandName = args[0].toLowerCase()
     
+if (commandName === args[0]) {
+      message.react('✅')
+    }
+  
+if (!commandName === args[0]) {
+    message.react('❌')
+  }
     
     try {
         delete require.cache[require.resolve(`./${commandName}.js`)]
