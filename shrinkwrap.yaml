@@ -7,7 +7,7 @@ dependencies:
   ms: 2.1.2
   nodemon: 2.0.2
   picomatch: 2.2.2
-  qs: 6.9.2
+  qs: 6.9.3
   superagent: 5.2.2
   version: 0.1.2
 packages:
@@ -957,6 +957,12 @@ packages:
       node: '>=0.6'
     resolution:
       integrity: sha512-2eQ6zajpK7HwqrY1rRtGw5IZvjgtELXzJECaEDuzDFo2jjnIXpJSimzd4qflWZq6bLLi+Zgfj5eDrAzl/lptyg==
+  /qs/6.9.3:
+    dev: false
+    engines:
+      node: '>=0.6'
+    resolution:
+      integrity: sha512-EbZYNarm6138UKKq46tdx08Yo/q9ZhFoAXAI1meAFd2GtbRDhbZY2WQSICskT0c5q99aFzLG1D4nvTk9tqfXIw==
   /range-parser/1.2.1:
     dev: false
     engines:
@@ -1358,6 +1364,6 @@ specifiers:
   ms: ^2.1.2
   nodemon: ^2.0.2
   picomatch: ^2.2.2
-  qs: ^6.9.2
+  qs: ^6.9.3
   superagent: ^5.2.2
   version: ^0.1.2
