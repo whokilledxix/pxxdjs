@@ -15,8 +15,8 @@ module.exports.run = async (bot, message, args) =>{
            .setColor(colours.fioletowy)
            .setAuthor(`KxpBOTv2 (beta) DOGS!`, message.guild.iconURL)
            .setImage(body.message)
+           .setFooter(`Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
            .setTimestamp()
-           .setFooter(`KxpBOTv2 (beta)`, bot.user.displayAvatarURL)
 
            message.channel.send({embed: dEmbed});
 

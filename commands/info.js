@@ -13,7 +13,8 @@ module.exports.run = async(bot, message, args) => {
     .setDescription("``Ta komenda umożliwia dowiedzeniu się co oznaczają poszczególne komendy!``")
     .addField("**Na przykład:**", '\`k!info-mute`')
     .addField("**Dostępne informacje:**", '\`k!info-ban(k!ib)`\n`k!info-cat(k!ic)`\n`k!info-dog(k!id)`\n`k!info-kick(k!ik)`\n`k!info-mute(k!im)`\n`k!info-pomoc(k!ip)`\n`k!info-serverinfo(k!is)`\n`k!info-unmute(k!iu)`\n`k!info-userinfo(k!i-ui)`\n`k!info-ping(k!i-p)`\n`k!info-report(k!ir)`\n`k!info-uptime(k!i-u)`\n', true)
-    .setFooter(`KxpBOTv2(beta)`)
+    .setFooter(`Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
+     .setTimestamp()
     message.channel.send({embed: iEmbed});
 
 
@@ -40,7 +41,8 @@ module.exports.run = async(bot, message, args) => {
     .addField("**Sposób użycia:**", '\`k!cat`\n', true)
     .addField("**Dostępne skróty:**", '\`k!c`\n`k!kot`\n`k!koteczek`', true)
     .setDescription("**Pokazuję losowe zdjęcie kota!**")
-    .setFooter(`KxpBOTv2(beta)`)
+    .setFooter(`Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
+    .setTimestamp()
     message.channel.send({embed: imEmbed})
 
     message.delete();

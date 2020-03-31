@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) =>{
      .setAuthor(`KxpBOTv2 (beta) CATS!`, message.guild.iconURL)
      .setImage(body.file)
      .setTimestamp()
-     .setFooter(`KxpBOTv2 (beta)`, bot.user.displayAvatarURL)
+     .setFooter(`Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
      
      message.channel.send({embed: cEmbed});
 
