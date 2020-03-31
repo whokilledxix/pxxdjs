@@ -30,7 +30,7 @@ if (pomoc) {
      .setTitle("**Oto moje komendy:**", true)
      .addField("**Prefix:**", `${prefix}`, true, true)
      .addField("**Podstawową komedna jest:**", `${prefix}pomoc`, true, true)
-     .addField("**4Fun:**", `\`${prefix}cat\`\n\`${prefix}dog\`\n``${prefix}ping``\n`, true, true)
+     .addField("**4Fun:**", '\`k!cat\`\n\`k!dog\`\n`k!ping`\n`', true, true)
      .addField("**Moderacyjne:**", '\n`k!kick`\n`k!ban`\n`k!mute`\n`k!unmute`\n`k!report\n`', true)
      .addField("**Informacyjne:**", '\n`k!info`\n', true, true)
      .setFooter(`KxpBOTv2 (beta)`);
