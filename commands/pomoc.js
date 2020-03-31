@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 const botconfig = require("../botconfig.json");
 const colours = require("../colours.json");
 const superagent = require("superagent");
-let prefix = botconfig.prefix
+const prefix = require("../botconfig.json")
 
 
 module.exports.run = async (bot, message, args) => {
@@ -32,7 +32,7 @@ if (pomoc) {
      .addField("**Prefix:**", `${prefix}`, true)
      .addField("**Podstawową komedna jest:**", `${prefix}pomoc`)
      .addField("**4Fun:**", '\`k!cat\`\n\`k!dog\`\n`k!ping`\n')
-     .addField("**Moderacyjne:**", '\n`k!kick`\n`k!ban`\n`k!mute`\n`k!unmute`\n`k!report\n`k!clear`\n')
+     .addField("**Moderacyjne:**", '\n`k!kick`\n`k!ban`\n`k!mute`\n`k!unmute`\n`k!report\n`k!clear\n')
      .addField("**Informacyjne:**", '\n`k!info`\n')
      .setFooter(`Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
      .setTimestamp()
