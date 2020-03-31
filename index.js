@@ -54,8 +54,12 @@ bot.on("message", async message => {
     
     let prefix = botconfig.prefix;
   
-  //szukam w dokumentacji. w8 a minute
-    if (message.mentions.users.array().includes(bot.user)) return message.channel.send('Nac huj bota pingujesz?');//a jak embed?
+    const mentionEmbed = new Discord.MessageEmbed()
+    .setTitle(message.author.username)
+    .setDescription(`**Witaj:**`, message.author.username `**Oznaczyłeś mnie ponieważ chcesz się dowiedzieć czegoś o mnie tak więc zaczynajmy!**`)
+    .addField("**Autor Bota:**", '`\`**Autorem bota jest KAPI#3034, który pisze mnie w JavaScript**`')
+    .addField("**informacje dla nerdów");
+    if (message.mentions.users.array().includes(bot.user)) return message.channel.send(mentionEmbed);//a jak embed?
   
     let messageArray = message.content.split(" ")
     let cmd = messageArray[0].toLowerCase();
