@@ -6,9 +6,11 @@ const superagent = require("superagent");
 
 module.exports.run = async (bot, message, args, channel, messages) => {
   
+  if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("**Nie masz permisji do użycia tej komendy!**")
   
+   
+  channel.bulkDelete(' ')
   
-  channel.bulkDelete.join(' ')
   
   let embed = new Discord.MessageEmbed()
      .setTitle(`**Wyczyszczono czat!**`)
@@ -24,4 +26,7 @@ module.exports.run = async (bot, message, args, channel, messages) => {
 
 module.exports.config = {
   name: "clear",
+  usage: "k!clear <ilosć>",
+  accessableby: "Administrator",
+  aliases: ["c"]
 }

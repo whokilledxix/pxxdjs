@@ -13,8 +13,11 @@ module.exports.run = async (bot, message, args) => {
       message.react('❌')
     }  
   
+    if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("**Nie masz permisji do użycia tej komendy!**")
     if (!kick) return message.reply("``Nie znaleziono użytkownika!``, **Poprawne użycie:** ``k!kick <@user> <powod>``");
     if (!kick.kickable) return message.reply("``Nie mogę wurzycić tego użytkownika!``");
+    if(kick.hasPermission('ADMINISTRATOR')) return message.reply("Nie mam permisji do wyciszenia")
+    
    
     
     
