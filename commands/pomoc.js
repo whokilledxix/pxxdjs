@@ -20,9 +20,7 @@ module.exports.run = async (bot, message, args) => {
 if (pomoc) {
     message.react('✅')
   } 
-  if (!pomoc) {
-    message.react('❌')
-  }
+ 
     
     
     
