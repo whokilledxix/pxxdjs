@@ -29,4 +29,8 @@ module.exports = bot => {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
         bot.user.setActivity("Jestem juz na Glitchu :O", {type: "PLAYING"});
     }, 5000)
+  setInterval(function() {
+        let status = statuses[Math.floor(Math.random() * statuses.length)];
+        bot.user.setActivity("📋Komendy- k!p", {type: "WATCHING"});
+    }, 5000)
 }
