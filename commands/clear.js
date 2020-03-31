@@ -14,8 +14,9 @@ module.exports.run = async (bot, message, args, channel, messages) => {
   
      let embed = new Discord.MessageEmbed()
      .setTitle(`**Wyczyszczono chat!**`)
-     .addField(``, `**Chat został wyczyszczony przez:**\n\n**${message.author.username}**\n\n**Ilość usuniętych wiadomości:**\n\n**${args[0]}**`)
+     .addField(`⚠**Uwaga!**⚠`, `\n**Chat został wyczyszczony przez:**\n\n**${message.author.username}**\n\n**Ilość usuniętych wiadomości:**\n\n**${args[0]}**`)
      .setFooter(`KxpBOTv2(beta)`)
+     .setTimestamp()
      message.channel.send(embed)
 
 
