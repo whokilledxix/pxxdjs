@@ -46,6 +46,6 @@ if (pomoc) {
 module.exports.config = {
     name: "pomoc",
     usage: "k!pomoc",
-    aliases: ["p", "Pomoc","Komendy"],
+    aliases: ["Komendy"],
     accessableby: "Members"
 }
