@@ -12,6 +12,7 @@ module.exports.run = async (bot, message, args) => {
       message.react('✅')
     }
   
+    if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("**Nie masz permisji do użycia tej komendy!**")
     if(!unmute) return message.reply("Nie znaleziono użytkownika!");
     if(unmute.hasPermission('MANAGE_ROLES')) return message.reply("Nie mam permisji do zabrania roli!");
 

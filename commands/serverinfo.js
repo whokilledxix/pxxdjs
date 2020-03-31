@@ -14,7 +14,8 @@ module.exports.run = async (bot, message, args) =>{
         .addField("**Założyciel:**", `${message.guild.owner}`, true)
         .addField("**Ilość użytkowników:**", `${message.guild.memberCount}`, true)
         .addField("**Ilość rang:**", `${message.guild.roles.size}`, true)
-        .setFooter(`KxpBOTv2 (beta)`, bot.user.displayAvatarURL);
+        .setFooter(`Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
+        .setTimestamp()
         message.channel.send({embed: sEmbed});
        
         if (sEmbed) {

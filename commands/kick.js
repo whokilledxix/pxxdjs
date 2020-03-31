@@ -35,8 +35,9 @@ module.exports.run = async (bot, message, args) => {
       )
       .setTimestamp()
       .setFooter(
-        `KxpBOTv2(beta)`,
-      );
+      `Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
+     
+      ;
     
     
     message.channel.send({embed: Kicked});

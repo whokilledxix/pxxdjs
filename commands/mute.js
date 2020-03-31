@@ -15,6 +15,7 @@ module.exports.run = async (bot, message, args) => {
       message.react('❌')
     }
     
+    if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("**Nie masz permisji od użycia tej komendy!**")
     if(!mute) return message.reply("Nie znaleziono użytkownika!")
     if(mute.hasPermission('ADMINISTRATOR')) return message.reply("Nie mam permisji do wyciszenia")
     let muterole = message.guild.roles.fetch(`name`, "Muted");

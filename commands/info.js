@@ -55,7 +55,8 @@ module.exports.run = async(bot, message, args) => {
     .addField("**Sposób użycia:**", '\`k!dog`\n', true)
     .addField("**Dostępne skróty:**", '\`k!d`\n`k!piesek`\n`k!pies`\n`k!psiur`', true)
     .setDescription("**Pokazuję losowe zdjęcie psa!**")
-    .setFooter(`KxpBOTv2(beta)`)
+    .setFooter(`Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
+    .setTimestamp()
     message.channel.send({embed: imEmbed})
 
     message.delete();
@@ -68,7 +69,8 @@ module.exports.run = async(bot, message, args) => {
     .addField("**Sposób użycia:**", '\`k!kick <@member> <powod>`\n', true)
     .addField("**Dostępne skróty:**", '\n`k!k`', true)
     .setDescription("**Wyrzucam oznaczonego użytkownika!**")
-    .setFooter(`KxpBOTv2(beta)`)
+    .setFooter(`Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
+    .setTimestamp()
     message.channel.send({embed: imEmbed})
 
     message.delete();
@@ -81,7 +83,8 @@ module.exports.run = async(bot, message, args) => {
     .addField("**Sposób użycia:**", '\`k!mute <@member>`\n', true)
     .addField("**Dostępne Skróty:**", '\`k!m`', true)
     .setDescription("**Mutuję oznaczonego użytkownika!**")
-    .setFooter(`KxpBOTv2(beta)`)
+    .setFooter(`Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
+    .setTimestamp()
     message.channel.send({embed: imEmbed})
 
     message.delete();
@@ -94,7 +97,8 @@ module.exports.run = async(bot, message, args) => {
     .addField("**Sposób użycia:**", '`\n`**k!ping**\n', true)
     .addField("**Dostępne skróty:**", '`\n`**k!pong**\n', true)
     .setDescription("**Pokazuję aktualny ping bota oraz API**")
-    .setFooter(`KxpBOTv2(beta)`)
+    .setFooter(`Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
+    .setTimestamp()
 
     message.channel.send(ipEmbed)
     message.delete()
@@ -106,7 +110,8 @@ module.exports.run = async(bot, message, args) => {
     .setTitle("**Info - Pomoc**")
     .setDescription("**Wyświetlam listę komend, które są w bocie**")
     .addField("**Dostępne Skróty:**", '\`k!p`\n`k!Pomoc`\n`k!Komendy`', true)
-    .setFooter(`KxpBOTv2(beta)`)
+    .setFooter(`Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
+    .setTimestamp()
     message.channel.send({embed: imEmbed})
 
     message.delete();
@@ -120,7 +125,8 @@ module.exports.run = async(bot, message, args) => {
     .addField("**Sposób użycia:**", '`\n`k!report #channel <@Member> <powod>`\n`', true)
     .addField("**Dostępne Skróty:**", '`\n`k!r`\n`', true)
     .setDescription("**Po wpisaniu:** `k!r #channel @member powod` **Wysyłam na oznaczony kanał autora komendy, osobę oznaczoną oraz powód!**", true)
-    .setFooter(`KxpBOTv2(beta)`)
+    .setFooter(`Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
+    .setTimestamp()
 
     message.channel.send(irEmbed)
     message.delete()
@@ -133,7 +139,8 @@ module.exports.run = async(bot, message, args) => {
     .addField("**Sposób użycia:**", '\`k!serverinfo`\n', true)
     .addField("**Dostępne Skróty:**", '\`k!si`\n`k!serverdsc`\n`k!sinfo`', true)
     .setDescription("**Pokazują informację o twoim serwerze!**")
-    .setFooter(`KxpBOTv2(beta)`)
+    .setFooter(`Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
+    .setTimestamp()
     message.channel.send({embed: imEmbed})
     
     message.delete();
@@ -146,7 +153,8 @@ module.exports.run = async(bot, message, args) => {
     .addField("**Sposób użycia:**", '\`k!unmute <@member>`\n', true)
     .addField("**Dostępne skróty:**", '\`k!unm`', true)
     .setDescription("**Odciszam oznaczonego użytkownika!**")
-    .setFooter(`KxpBOTv2(beta)`)
+    .setFooter(`Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
+    .setTimestamp()
     message.channel.send({embed: imEmbed})
 
     message.delete();
@@ -159,7 +167,8 @@ module.exports.run = async(bot, message, args) => {
     .addField("**Sposób użycia:**", '`\n`k!uptime`\n`', true)
     .addField("**Dostępne Skróty:**", '`\n`k!up`\n`k!u`\n`', true)
     .setDescription("**Pokazuję przez ile: dni, godzin, minut oraz sekund bot jest online!**")
-    .setFooter(`KxpBOTv2(beta)`)
+    .setFooter(`Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
+    .setTimestamp()
     message.channel.send(iuEmbed)
     message.delete();
  }
@@ -171,7 +180,8 @@ module.exports.run = async(bot, message, args) => {
     .addField("**Sposób użycia:**", '\`k!userinfo`\n', true)
     .addField("**Dostępne skróty:**", '\`k!user`\n`k!ui`', true)
     .setDescription("**Pokazuję informację o tobie!**")
-    .setFooter(`KxpBOTv2(beta)`)
+    .setFooter(`Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
+    .setTimestamp()
     message.channel.send({embed: imEmbed})
     
     

@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     if (!member.unbannable) return message.reply("``Nie mogę odbanować tego użytkownika!``");
    
     
-    
+    if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("**Nie masz permsji do użycia tej komendy")
     
     let reason = args.slice(1).join(" ");
     if (!reason) reason = "No reason specified";
@@ -26,8 +26,9 @@ module.exports.run = async (bot, message, args) => {
       )
       .setTimestamp()
       .setFooter(
-        `KxpBOTv2(beta)`,
-      );
+        `Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
+     
+      ;
     
     
     message.channel.send({embed: Banned});

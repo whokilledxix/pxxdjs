@@ -19,7 +19,8 @@ module.exports.run = async (bot, message, args, client) => {
     .setTitle("**Mój Uptime**")
     .setAuthor(message.author.username)
     .addField("**Czas Działania:**", `${botuptime}`, false)
-    .setFooter(`KxpBOTv2(beta)`)
+    .setFooter(`Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
+    .setTimestamp()
 
    message.channel.send(embed);
     

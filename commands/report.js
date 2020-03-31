@@ -18,7 +18,8 @@ module.exports.run = async (bot, message, args) => {
     .addField("**Autor komendy**", message.author.username)
     .addField("**Osoba Zgłoszona**", target.user.username)
     .addField("**Powód:**", reason)
-    .setFooter(`KxpBOTv2(beta)`)    
+    .setFooter(`Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
+    .setTimestamp()   
 
     Channel.send(mChannel)
 }
