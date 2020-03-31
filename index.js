@@ -55,10 +55,12 @@ bot.on("message", async message => {
     let prefix = botconfig.prefix;
   
     const mentionEmbed = new Discord.MessageEmbed()
-    .setTitle(message.author.username)
-    .setDescription(`**Witaj:**`, message.author.username `**Oznaczyłeś mnie ponieważ chcesz się dowiedzieć czegoś o mnie tak więc zaczynajmy!**`)
-    .addField("**Autor Bota:**", '`\`**Autorem bota jest KAPI#3034, który pisze mnie w JavaScript**`')
-    .addField("**informacje dla nerdów");
+    .setTitle(`${message.author.username}`, `${message.author.}`)
+    .setDescription(`**Witaj:** ${message.author.username}`, "**Oznaczyłeś mnie ponieważ chcesz się dowiedzieć czegoś o mnie tak więc zaczynajmy!**")
+    .addField("**Autor Bota:**", '`\Autorem bota jest KAPI#3034, który pisze mnie w JavaScript`')
+    .addField("**informacje dla nerdów:**", '`\Wersja Discord.js:`\n**12.0.1**\n\n`Wersja Node.js:`\n**12.16.1**\n', true)
+    .addField("**Przydatne linki:**", '`\Jeżeli chcesz mnie dodać wystarczy że klikniesz tutaj:`\n[>>TUTAJ<<](https://discordapp.com/api/oauth2/authorize?client_id=687014891055218750&permissions=8&scope=bot)\n')
+    .setFooter(`KxpBOTv2(beta)`);
     if (message.mentions.users.array().includes(bot.user)) return message.channel.send(mentionEmbed);//a jak embed?
   
     let messageArray = message.content.split(" ")
