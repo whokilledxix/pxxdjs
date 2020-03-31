@@ -53,6 +53,10 @@ bot.on("message", async message => {
     if(message.channel.type === "dm") return;
     
     let prefix = botconfig.prefix;
+  
+  //szukam w dokumentacji. w8 a minute
+    if (message.mentions.users.array().includes(bot.user)) return message.channel.send('Nac huj bota pingujesz?');//a jak embed?
+  
     let messageArray = message.content.split(" ")
     let cmd = messageArray[0].toLowerCase();
 
@@ -65,15 +69,11 @@ bot.on("message", async message => {
     let commandfile = bot.commands.get(cmd.slice(prefix.length)) || bot.commands.get(bot.aliases.get(cmd.slice(prefix.length)))
     if(commandfile) { 
     commandfile.run(bot, message, args) 
-} else {
-  if(message.content.startsWith(prefix)) {
+} else if (message.content.startsWith(prefix)) {
     message.react('❌')
     message.reply('Nie znaleziono komendy! wpisz ``k!pomoc`` aby zobaczyć listę komend!')
   }
 }
-
-
-    }
 
    
 
