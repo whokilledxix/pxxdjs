@@ -16,21 +16,21 @@ module.exports = bot => {
     setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
         bot.user.setActivity("📋Komendy- k!p", {type: "WATCHING"});
-    }, 5000)
+    }, 50000)
 
 
     setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
         bot.user.setActivity("Mój prefix to - k!", {type: "PLAYING"});
-    }, 5000)
+    }, 50000)
   
-  
-  setInterval(function() {
-        let status = statuses[Math.floor(Math.random() * statuses.length)];
-        bot.user.setActivity("Jestem juz na Glitchu :O", {type: "PLAYING"});
-    }, 5000)
   setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
         bot.user.setActivity("📋Komendy- k!p", {type: "WATCHING"});
-    }, 5000)
+    }, 50000)
+  
+  setInterval(function() {
+    let status = statuses[Math.floor(Math.random() * statuses.length)];
+    bot.user.setActivity("Oznacz mnie, po więcej informacji!", {type: "LISTENING"});
+  }, 50000)
 }
