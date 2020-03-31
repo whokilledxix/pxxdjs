@@ -68,6 +68,7 @@ bot.on("message", async message => {
 } else {
   if(message.content.startsWith(prefix)) {
     message.react('❌')
+    message.reply('Nie znaleziono komendy! wpisz ``k!pomoc`` aby zobaczyć listę komend!')
   }
 }
 
