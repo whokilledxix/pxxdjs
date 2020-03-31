@@ -28,11 +28,11 @@ if (pomoc) {
     
      .setColor(colours.jasnoniebieski)
      .setTitle("**Oto moje komendy:**", true)
-     .addField("**Prefix:**", `${prefix}`, true, true)
-     .addField("**Podstawową komedna jest:**", `${prefix}pomoc`, true, true)
-     .addField("**4Fun:**", '\`k!cat\`\n\`k!dog\`\n`k!ping`\n`', true, true)
-     .addField("**Moderacyjne:**", '\n`k!kick`\n`k!ban`\n`k!mute`\n`k!unmute`\n`k!report\n`', true)
-     .addField("**Informacyjne:**", '\n`k!info`\n', true, true)
+     .addField("**Prefix:**", `${prefix}`, true)
+     .addField("**Podstawową komedna jest:**", `${prefix}pomoc`, true)
+     .addField("**4Fun:**", '\`k!cat\`\n\`k!dog\`\n`k!ping`\n`')
+     .addField("**Moderacyjne:**", '\n`k!kick`\n`k!ban`\n`k!mute`\n`k!unmute`\n`k!report\n`')
+     .addField("**Informacyjne:**", '\n`k!info`\n')
      .setFooter(`KxpBOTv2 (beta)`);
      message.author.send({embed: pEmbed});
 
