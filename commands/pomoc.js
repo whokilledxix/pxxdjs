@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 const botconfig = require("../botconfig.json");
 const colours = require("../colours.json");
 const superagent = require("superagent");
-const prefix = (botconfig)
+let prefix = botconfig.prefix
 
 
 module.exports.run = async (bot, message, args) => {
