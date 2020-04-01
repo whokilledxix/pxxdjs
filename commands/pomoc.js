@@ -8,7 +8,7 @@ const { prefix } = require("../botconfig.json")
 module.exports.run = async (bot, message, args) => {
     
   
-  if(message.content.startsWith(prefix));
+  if(message.content.startsWith(prefix)){
   
   let pomoc = new Discord.MessageEmbed()
     .setColor(colours.fioletowy)
@@ -41,11 +41,11 @@ if (pomoc) {
    
 
 }
-
+}
 
 module.exports.config = {
     name: "pomoc",
     usage: "k!pomoc",
-    aliases: ["Komendy"],
+    aliases: ["Komendy","p","pomoc"],
     accessableby: "Members"
 }

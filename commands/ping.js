@@ -3,7 +3,7 @@ const { prefix } = require("../botconfig.json")
 
 module.exports.run = async (bot, message, args) => {
    
-  if(message.content.startsWith(prefix))
+  if(message.content.startsWith(prefix)){
   
   message.channel.send("Ping.....").then(m =>{
        let ping = m.createdTimestamp = message.createdTimestamp
@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
   })
     
 }
-
+}
 
 module.exports.config = {
     name: "ping",

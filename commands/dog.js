@@ -2,9 +2,15 @@ const Discord = require("discord.js")
 const botconfig = require("../botconfig.json");
 const colours = require("../colours.json");
 const superagent = require("superagent") 
-
+const { prefix } = require("../botconfig.json")
 module.exports.run = async (bot, message, args) =>{
-    let msg = await message.channel.send("Hau-Hau.....")
+   
+  
+  if(message.content.startsWith(prefix)){
+  
+  
+  
+     let msg = await message.channel.send("Hau-Hau.....")
 
         let {body} = await superagent
         .get('https://dog.ceo/api/breeds/image/random')
@@ -22,7 +28,7 @@ module.exports.run = async (bot, message, args) =>{
 
            msg.delete();
 }
-
+}
 module.exports.config = {
     name: "dog",
     aliases: ["pies", "piesek", "psiur"]

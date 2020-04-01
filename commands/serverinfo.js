@@ -6,7 +6,7 @@ const { prefix } = require("../botconfig.json")
 
 module.exports.run = async (bot, message, args) =>{
     
-    if(message.content.startsWith(prefix));
+    if(message.content.startsWith(prefix)){
   
      let sEmbed = new Discord.MessageEmbed()
         .setColor(colours.fioletowy)
@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) =>{
         }
     
 }
-
+}
 
 
 module.exports.config = {

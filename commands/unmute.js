@@ -8,7 +8,7 @@ const { prefix } = require("../botconfig.json")
 
 module.exports.run = async (bot, message, args) => {
     
-    if(message.content.startsWith(prefix));
+    if(message.content.startsWith(prefix)){
   
     let unmute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if (unmute) {
@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
 
     message.delete();
 }
-
+}
 
 
 

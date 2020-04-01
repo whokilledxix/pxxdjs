@@ -3,8 +3,13 @@ const botconfig = require("../botconfig.json");
 const colours = require("../colours.json");
 const superagent = require("superagent");
 const client = require("discord.js")
-
+const { prefix } = require("../botconfig.json")
 module.exports.run = async (bot, message, args) => {
+  
+  if(message.content.startsWith(prefix)){
+  
+  
+  
   let kick = message.mentions.members.first();
   if (kick) {
       message.react('😀')
@@ -58,7 +63,7 @@ module.exports.run = async (bot, message, args) => {
 
     
 }
-
+}
 
 module.exports.config = {
     name: "kick",

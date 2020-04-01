@@ -4,7 +4,7 @@ const { prefix } = require("../botconfig.json")
 
 module.exports.run = async (bot, message, args) => {
 
-    if(message.content.startsWith(prefix))
+    if(message.content.startsWith(prefix)){
     if(!message.member.hasPermission(["MANAGE_MESSAGE", "ADMINISTRATOR"])) return message.channel.send("``Nie możesz użyć tej komendy!``")
 
     let argsresult;
@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
         message.channel.send(argsresult)
     }
 }
-
+}
 
 module.exports.config = {
     name: "say",

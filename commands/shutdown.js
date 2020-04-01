@@ -4,7 +4,7 @@ const { prefix } = require("../botconfig.json")
 
 
 module.exports.run = async (bot, message, args) => {
-    if(message.content.startsWith(prefix))
+    if(message.content.startsWith(prefix)){
     if(message.author.id != "394154957525352448") return message.channel.send("``Nie jesteś właścicielem bota!``")
   
     try{
@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
         message.channel.send(`ERROR: ${e.message}`)
     }
 }
-
+}
 
 
 module.exports.config = {

@@ -2,11 +2,15 @@ const Discord = require("discord.js")
 const botconfig = require("../botconfig.json");
 const colours = require("../colours.json");
 const superagent = require("superagent") 
-
+const { prefix } = require("../botconfig.json")
 
 
 
 module.exports.run = async(bot, message, args) => {
+   
+  if(message.content.startsWith(prefix)){
+  
+  
     let iEmbed = new Discord.MessageEmbed()
     .setColor(colours.aqua)
     .setTitle("**Informacje**")
@@ -192,7 +196,7 @@ module.exports.run = async(bot, message, args) => {
 
 
 }
-
+}
 module.exports.config = {
     name: "info",
     usage: "k!info <nazwa komendy>",

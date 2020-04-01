@@ -2,10 +2,10 @@ const Discord = require("discord.js")
 const botconfig = require("../botconfig.json");
 const colours = require("../colours.json");
 const superagent = require("superagent");
-
+const { prefix } = require("../botconfig.json")
 
 module.exports.run = async (bot, message, args, channel, messages) => {
-  
+  if(message.content.startsWith(prefix)){
   if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("**Nie masz permisji do użycia tej komendy!**")
   
    
@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args, channel, messages) => {
 } 
 
 
-
+}
 
 
 

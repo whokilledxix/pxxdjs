@@ -1,7 +1,7 @@
 const Discord = require("discord.js")
 const { prefix } = require("../botconfig.json")
 module.exports.run = async (bot, message, args, client) => {
-
+    if(message.content.startsWith(prefix)){
 
     let uptime = process.uptime();
     let days = Math.floor((uptime % 31536000) / 86400);
@@ -25,6 +25,7 @@ module.exports.run = async (bot, message, args, client) => {
    message.channel.send(embed);
     
     
+}
 }
 
 

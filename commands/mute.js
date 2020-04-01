@@ -3,9 +3,12 @@ const botconfig = require("../botconfig.json");
 const colours = require("../colours.json");
 const superagent = require("superagent");
 const client = require("discord.js")
-
+const { prefix } = require("../botconfig.json")
 
 module.exports.run = async (bot, message, args) => {
+    if(message.content.startsWith(prefix)){
+  
+  
     let mute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]))
     if (mute) {
       message.react('✅')
@@ -40,7 +43,7 @@ module.exports.run = async (bot, message, args) => {
 
     
 }
-
+}
     
 module.exports.config = {
     name: "mute",

@@ -2,10 +2,15 @@ const Discord = require("discord.js")
 const botconfig = require("../botconfig.json");
 const colours = require("../colours.json");
 const superagent = require("superagent") 
-
+const { prefix } = require("../botconfig.json")
 
 
 module.exports.run = async (bot, message, args) =>{
+    
+    if(message.content.startsWith(prefix)){
+  
+  
+  
     let uEmbed = new Discord.MessageEmbed()
     .setColor(colours.aqua)
     .setTitle("Informacje o użytkowniku")
@@ -23,6 +28,7 @@ module.exports.run = async (bot, message, args) =>{
    if (uEmbed) {
      message.react('✅')
    }
+}
 }
 
 module.exports.config = {
