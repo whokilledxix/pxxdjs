@@ -1,6 +1,9 @@
 const Discord = require("discord.js")
 const colours = require("../colours.json");
+const { prefix } = require("../botconfig.json")
 module.exports.run = async (bot, message, args) => {
+    if(message.content.startsWith(prefix)); 
+   
     let Channel = message.mentions.channels.first()
     if(!Channel) return message.channel.send("**Prosze oznacz kanał na, którym mam wysłać zgłoszenie!** **Np:** ``k!r #logi @member xD``")
     let target = message.mentions.members.first()

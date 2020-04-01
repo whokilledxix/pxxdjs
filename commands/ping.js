@@ -1,7 +1,11 @@
 const Discord = require("discord.js")
+const { prefix } = require("../botconfig.json")
 
 module.exports.run = async (bot, message, args) => {
-   message.channel.send("Ping.....").then(m =>{
+   
+  if(message.content.startsWith(prefix))
+  
+  message.channel.send("Ping.....").then(m =>{
        let ping = m.createdTimestamp = message.createdTimestamp
        if (ping) {
       message.react('✅')

@@ -1,9 +1,10 @@
 const Discord = require("discord.js")
 const botconfig = require("../botconfig.json")
+const { prefix } = require("../botconfig.json")
 
 
 module.exports.run = async (bot, message, args) => {
-    
+    if(message.content.startsWith(prefix))
     if(message.author.id != "394154957525352448") return message.channel.send("``Nie jesteś właścicielem bota!``")
   
     try{
