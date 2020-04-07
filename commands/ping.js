@@ -25,9 +25,9 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.config = {
-    name: "ping",
-    usage: "k!ping",
+    name: "botinfo",
+    usage: "k!botinfo",
     accessableby: "Members",
-    aliases: ["pong"]
+    aliases: [""]
 
 }
