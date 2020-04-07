@@ -33,12 +33,14 @@ module.exports.run = async (bot, message, args) => {
        .setTitle("⚠ **Bot Info** ")
        .setColor(colours.fioletowy)
        .setTimestamp()
-       .addField("〰**__Ping Bota__**〰", `${Math.round(bot.ws.ping)}`, true)
-       .addField("📈 **__Uptime__** 📉", `${botuptime}`, true)
+       .addField("**__Prefix__**", `${prefix}`, true)
+       .addField("〰**__Ping Bota__**〰", `${Math.round(bot.ws.ping)}ms`)
+       .addField("📈 **__Uptime__** 📉", `${botuptime}`)
        .addField("💾 **__Software__**💾", `${result ? result : "Niezidentyfikowano!"}`, true)
        .addField("**__Wersja Node.js__**", `${process.version.slice(1)}`)
        .addField("**__Wersja Discord.js__**", `${pack.dependencies["discord.js"].slice(1)}`)
-       .setFooter(`**Komendę wpisał:** ${message.author.username}`, `${message.author.displayAvatarURL()}`)
+       .setFooter(`Komendę wpisał: ${message.author.username}`, `${message.author.displayAvatarURL()}`)
+    message.channel.send(embed)
   
     
 }

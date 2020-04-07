@@ -195,7 +195,12 @@ if(args[0] == "botinfo"){
   let embed = new Discord.MessageEmbed()
   .setColor(colours.jasnoniebieski)
   .setTitle("**Info - botinfo**")
-  .addField("**Sposób")
+  .addField("**Sposób użycia:**", '\`k!botinfo`\n`', true)
+  .addField("**Dostępne skróty:**", '`k!bot`\n`k!ping`', true)
+  .setDescription("**Pokazuję wszystkie informacje o bocie**")
+  .setTimestamp()
+  .setFooter(`Komende wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
+  message.channel.send(embed)
 }
 
 
