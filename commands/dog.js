@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) =>{
            
            let dEmbed = new Discord.MessageEmbed()
            .setColor(colours.fioletowy)
-           .setAuthor(`KxpBOTv2 (beta) DOGS!`, message.guild.iconURL)
+           .setAuthor(`pxx bot DOGS!`, message.guild.iconURL)
            .setImage(body.message)
            .setFooter(`Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
            .setTimestamp()

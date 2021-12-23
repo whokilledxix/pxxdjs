@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.config = {
     name: "say",
-    usage: "k!say <wiadomosc>",
+    usage: ".say <wiadomosc>",
     accessableby: "Staff",
     aliases: ["s",]
 }

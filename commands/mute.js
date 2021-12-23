@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     if(message.content.startsWith(prefix)){
   
   
-    let mute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]))
+    let mute = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[0]))
     if (mute) {
       message.react('✅')
     }
@@ -22,24 +22,14 @@ module.exports.run = async (bot, message, args) => {
     if(!mute) return message.reply("Nie znaleziono użytkownika!")
     if(mute.hasPermission('ADMINISTRATOR')) return message.reply("Nie mam permisji do wyciszenia")
     let muterole = message.guild.roles.fetch(`name`, "Muted");
-    if(!muterole){
-        try{
-         muterole = await message.guild.createRole({
-             name: "muted",
-             color: "#343536",
-             permission: []
-         })
-         message.guild.channels.forEach(async (channel, id) => {
-             await channel.overwritePermissions(muterole, {
-                 SEND_MESSAGES: false,
-                 ADD_REACTIONS: false,
-             })
-         })
-        }catch(e){
-            console.log(e.stack);
-        }
-    }await message.mentions.members.first().roles.add('688417859319234665');
-    message.reply(`<@${mute.id}> został wyciszony!`)
+    await message.mentions.members.first().roles.add('923321358790844446');
+    let muteembed = new Discord.MessageEmbed()
+      .setTitle("Mute!")
+      .setDescription("<@" + mute.id + "> Został wyciszony przez <@" + message.author.id + ">")
+      .setThumbnail(message.author.displayAvatarURL())
+
+      message.channel.send({embed: muteembed})
+      message.delete();
 
     
 }

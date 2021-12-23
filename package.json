@@ -1,7 +1,7 @@
 {
-  "name": "kxpbotv2",
+  "name": "pxx",
   "version": "1.0.0",
-  "description": "",
+  "description": "discordbot node",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -9,20 +9,20 @@
     "watching:run": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "KAPI#3034",
+  "author": "pedzio#2776",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.0.2",
+    "express": "^4.17.2",
+    "express-glitch-keepalive": "^0.2.0",
     "formidable": "^1.2.2",
     "fs": "^0.0.2",
     "ms": "^2.1.2",
     "nodemon": "^2.0.2",
     "picomatch": "^2.2.2",
     "qs": "^6.9.3",
-    "superagent": "^5.2.2",
-    "version": "^0.1.2",
-    "express": "^4.17.1",
-    "express-glitch-keepalive": "^0.2.0"
+    "superagent": "^5.3.1",
+    "version": "^0.1.2"
   },
   "engines": {
     "node": "12.16.1"

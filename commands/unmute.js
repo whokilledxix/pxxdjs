@@ -22,10 +22,14 @@ module.exports.run = async (bot, message, args) => {
     let unmuterole = message.guild.roles.fetch(`name`, "Muted");
     if(!unmuterole) return message.channel.send("Nie znaleziono roli ``Muted!``")
 
-    message.mentions.members.first().roles.remove('688417859319234665')
-    message.reply(`<@${unmute.id}> został odciszony!`)
+    message.mentions.members.first().roles.remove('923321358790844446')
+    let unmuteembed = new Discord.MessageEmbed()
+      .setTitle("Unmute!")
+      .setDescription("<@" + unmute.id + "> Został odciszony przez <@" + message.author.id + ">")
+      .setThumbnail(message.author.displayAvatarURL())
+    message.channel.send({embed: unmuteembed})
 
-    message.delete();
+  message.delete();
 }
 }
 

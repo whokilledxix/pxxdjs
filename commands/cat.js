@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) =>{
 
      let cEmbed = new Discord.MessageEmbed()
      .setColor(colours.jasnoniebieski)
-     .setAuthor(`KxpBOTv2 (beta) CATS!`, message.guild.iconURL)
+     .setAuthor(`pxx bot CATS!`, message.guild.iconURL)
      .setImage(body.file)
      .setTimestamp()
      .setFooter(`Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)

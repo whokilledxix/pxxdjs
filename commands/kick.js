@@ -19,9 +19,9 @@ module.exports.run = async (bot, message, args) => {
     }  
   
     if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply("**Nie masz permisji do użycia tej komendy!**")
-    if (!kick) return message.reply("``Nie znaleziono użytkownika!``, **Poprawne użycie:** ``k!kick <@user> <powod>``");
-    if (!kick.kickable) return message.reply("``Nie mogę wurzycić tego użytkownika!``");
-    if(kick.hasPermission('ADMINISTRATOR')) return message.reply("Nie mam permisji do wyciszenia")
+    if (!kick) return message.reply("``Nie znaleziono użytkownika!``, **Poprawne użycie:** ``.kick <@user> <powod>``");
+    if (!kick.kickable) return message.reply("``Nie mogę wyrzucić tego użytkownika!``");
+    if(kick.hasPermission('ADMINISTRATOR')) return message.reply("Nie mam permisji do wyrzucenia!")
     
    
     
@@ -36,7 +36,7 @@ module.exports.run = async (bot, message, args) => {
       )
       .setTitle("**Kick!**")
       .setDescription(
-        "**<@" + message.mentions.id + ">Został wyrzucony przez <@" + message.author.id + "> za: **" + reason
+        "**<@" + message.mentions.id + "> Został wyrzucony przez <@" + message.author.id + "> za: **" + reason
       )
       .setTimestamp()
       .setFooter(

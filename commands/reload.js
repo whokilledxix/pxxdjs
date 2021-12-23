@@ -4,7 +4,7 @@ const { prefix } = require("../botconfig.json")
 
 module.exports.run = async (bot, message, args) => {
     if(message.content.startsWith(prefix)){
-    if(message.author.id != "394154957525352448") return message.channel.send("``Nie jesteś właścicielem bota!``")
+    if(message.author.id != "894433798836613160") return message.channel.send("``Nie jesteś właścicielem bota!``")
     if(!args[0]) return message.channel.send("Proszę podaj komendę którą mam odświeżyć")
     
 
@@ -24,13 +24,13 @@ module.exports.run = async (bot, message, args) => {
     }
 
 
-    message.channel.send(`Komenda \`${args[0].toUpperCase()} została odświeżona!`)
+    message.channel.send(`Komenda **${args[0].toUpperCase()}** została odświeżona!`)
 }
 }
 
 module.exports.config = {
     name: "reload",
-    usage: "k!reload",
+    usage: ".reload",
     accessableby: "Bot Owner",
     aliases: ["r"]
 }

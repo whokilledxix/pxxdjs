@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args, client) => {
     
     
     let embed = new Discord.MessageEmbed()
-    .setTitle("**Mój Uptime**")
+    .setTitle("**Uptime**")
     .setAuthor(message.author.username)
     .addField("**Czas Działania:**", `${botuptime}`, false)
     .setFooter(`Komendę wpisał:${message.author.username}`, `${message.author.displayAvatarURL()}`)
@@ -33,7 +33,7 @@ module.exports.run = async (bot, message, args, client) => {
 
 module.exports.config = {
     name: "uptime",
-    usage: "k!uptime",
+    usage: ".uptime",
     accessableby: "Members",
     aliases: ["up", "u"]
 }

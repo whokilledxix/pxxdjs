@@ -7,21 +7,21 @@ module.exports = bot => {
     
     
     console.log(`${bot.user.username} działa!`)
-    // bot.user.setActivity("Mój prefix to k!", {type: "PLAYING" });
+    // bot.user.setActivity("Mój prefix to .", {type: "PLAYING" });
     let statuses = [
         `${bot.guilds.size}`,
-        "k!p",
-        "Mój prefix to k!"
+        ".",
+        "Mój prefix to ."
     ];
     setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
-        bot.user.setActivity("📋Komendy- k!p", {type: "WATCHING"});
+        bot.user.setActivity("PXX BOT", {type: "WATCHING"});
     }, 70000)
 
 
     setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
-        bot.user.setActivity("Mój prefix to - k!", {type: "PLAYING"});
+        bot.user.setActivity("Prefix - .", {type: "PLAYING"});
     }, 80000)
   
   setInterval(function() {

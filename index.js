@@ -14,7 +14,7 @@ const app = express();
 app.use(keepalive);
 
 app.get('/', (req, res) => {
-res.json('This bot should be online! Uptimerobot will keep it alive');
+res.json('xxx');
 });
 app.get("/", (request, response) => {
 response.sendStatus(200);
@@ -57,11 +57,10 @@ bot.on("message", async message => {
     const mentionEmbed = new Discord.MessageEmbed()
     .setTitle(`${message.author.username}`)
     .setDescription(`**Witaj: ${message.author.username}**`, "**Oznaczyłeś mnie ponieważ chcesz się dowiedzieć czegoś o mnie tak więc zaczynajmy!**")
-    .addField("**Autor Bota:**", '`\Autorem bota jest KAPI#3034, który pisze mnie w JavaScript`')
-    .addField("**informacje dla nerdów:**", '`\Wersja Discord.js:`\n**12.0.1**\n\n`Wersja Node.js:`\n**12.16.1**\n', true)
-    .addField("**Przydatne linki:**", '`\Jeżeli chcesz mnie dodać wystarczy że klikniesz tutaj:`\n[>>TUTAJ<<](https://discordapp.com/api/oauth2/authorize?client_id=687014891055218750&permissions=8&scope=bot)\n')
+    .addField("**Autor Bota:**", '`\Stworzył mnie pedzio#2776 wraz z biblioteką discord.js`')
+    .addField("**Informacje dla nerdów:**", '`\Wersja Discord.js:`\n**12.0.1**\n\n`Wersja Node.js:`\n**12.16.1**\n', true)
     .setColor(colours.fioletowy)
-    .setFooter(`KxpBOTv2(beta)`);
+    .setFooter(`pxx bot`);
     if (message.mentions.users.array().includes(bot.user)) return message.channel.send(mentionEmbed);//a jak embed?
   
     let messageArray = message.content.split(" ")
@@ -78,20 +77,13 @@ bot.on("message", async message => {
     commandfile.run(bot, message, args) 
 } else if (message.content.startsWith(prefix)) {
     message.react('❌')
-    message.reply('Nie znaleziono komendy! wpisz ``k!pomoc`` aby zobaczyć listę komend!')
+    message.reply('Nie znaleziono komendy! wpisz ``.help`` aby zobaczyć listę komend!')
 
 }
   if (message.author.bot) return;
   if (message.mentions.users.array().length > 0) {
     if (message.member.hasPermission('ADMINISTRATOR')) return;
-    const exampleEmbed = new Discord.MessageEmbed()
-      .setColor("#0055ff")
-      .setTitle("Użytkownik usunął wiadomość zawierającą wzmiankę:")
-      .setDescription(message.content)
-      .setAuthor(message.author.tag, message.author.displayAvatarURL())
-      .setTimestamp();
-    message.channel.send(exampleEmbed);
-  }
+  
   let eembed = new Discord.MessageEmbed()
     .setTitle("**Usunięta wiadomość**")
     .setColor(colours.red)
@@ -102,8 +94,8 @@ bot.on("message", async message => {
     .setTimestamp()
     .setFooter(`ID: ${message.id}`);
   let channel = message.guild.channels.cache.find(x => x.name === "logs");
-  channel.send(eembed);
- 
+  message.channel.send(eembed);
+  }
 }
  ) 
  

@@ -5,10 +5,11 @@ const { prefix } = require("../botconfig.json")
 
 module.exports.run = async (bot, message, args) => {
     if(message.content.startsWith(prefix)){
-    if(message.author.id != "394154957525352448") return message.channel.send("``Nie jesteś właścicielem bota!``")
+    if(message.author.id != "894433798836613160") return message.channel.send("``Nie jesteś właścicielem bota!``")
   
     try{
-        await message.channel.send("Bot jest wyłączany.....")
+        await message.channel.send("Bot jest wyłączany...")
+        await message.channel.send("✅")
         process.exit()
     } catch(e) {
         message.channel.send(`ERROR: ${e.message}`)
@@ -19,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.config = {
     name: "shutdown",
-    usage: "k!shutdown",
+    usage: ".shutdown",
     accessableby: "Bot Owner",
     aliases: ["s", "off"]
 }

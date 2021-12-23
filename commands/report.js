@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     if(message.content.startsWith(prefix)){ 
    
     let Channel = message.mentions.channels.first()
-    if(!Channel) return message.channel.send("**Prosze oznacz kanał na, którym mam wysłać zgłoszenie!** **Np:** ``k!r #logi @member xD``")
+    if(!Channel) return message.channel.send("**Prosze oznacz kanał na, którym mam wysłać zgłoszenie!** **Np:** ``.r #logi @member``")
     let target = message.mentions.members.first()
     if(!target) return message.channel.send("``Proszę oznacz osobę, którą masz zamiar zgłosić!``")
     let reason = args.slice(2).join(" ")
